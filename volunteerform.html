@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>WE FOR A CAUSE</title>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- AOS -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- Remixicon -->
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+  html, body { overflow-x: hidden; font-family: 'Poppins', sans-serif; }
+</style>
+</head>
+
+<body class="antialiased">
+
+<!-- NAVBAR -->
+<div class="nav"></div>
+
+
+
+
+<!-- VOLUNTEER FORM SECTION -->
+<section id="volunteer" class="bg-slate-50 py-16 px-4">
+  <div class="max-w-4xl mx-auto">
+
+    <div class="text-center mb-10" data-aos="fade-down">
+      <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mt-20 mb-2">
+        Become a Volunteer
+      </h2>
+      <p class="text-teal-600 font-semibold tracking-wide">
+        Join our mission to rescue and care for animals & communities
+      </p>
+    </div>
+
+    <form class="bg-white shadow-xl rounded-2xl p-6 md:p-10 space-y-6" data-aos="fade-up">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="text-sm font-medium text-gray-700">Full Name *</label>
+          <input type="text" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 outline-none">
+        </div>
+        <div>
+          <label class="text-sm font-medium text-gray-700">Email *</label>
+          <input type="email" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 outline-none">
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+          <label class="text-sm font-medium text-gray-700">Phone Number *</label>
+          <input type="tel" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 outline-none">
+        </div>
+        <div>
+          <label class="text-sm font-medium text-gray-700">City *</label>
+          <input type="text" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 outline-none">
+        </div>
+      </div>
+
+      <div>
+        <label class="text-sm font-medium text-gray-700">How would you like to help?</label>
+        <select id="volunteerRole" required class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 text-sm md:text-base">
+          <option value="">Select Volunteer Role</option>
+          <option value="Animal Rescue">Animal Rescue</option>
+          <option value="Animal Care">Animal Care</option>
+          <option value="Social Media">Social Media</option>
+          <option value="Fundraising">Fundraising</option>
+          <option value="Other">Other</option>
+        </select>
+
+        <div id="otherVolunteerField" class="mt-4 hidden">
+          <label class="text-sm font-medium text-gray-700">Please specify</label>
+          <input type="text" id="otherVolunteerInput" placeholder="Enter your role" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500 text-sm md:text-base">
+        </div>
+      </div>
+
+      <div>
+        <label class="text-sm font-medium text-gray-700">Message</label>
+        <textarea rows="3" class="w-full mt-1 px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-teal-500"></textarea>
+      </div>
+
+      <div class="text-center pt-4">
+        <button class="bg-teal-500 hover:bg-teal-600 text-white px-10 py-3 rounded-full font-semibold transition shadow-md">
+          Submit Application
+        </button>
+      </div>
+
+    </form>
+
+    <p class="text-gray-500 text-sm text-center mt-6">We respect your privacy. Your information will not be shared.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer"></div>
+
+<!-- SCRIPTS -->
+<script src="./footer.js"></script>
+<script src="./nav.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+<script>
+  // Initialize AOS
+  AOS.init({ duration: 1000, once: true });
+
+  // Show / Hide "Other" volunteer role input
+  const volunteerRole = document.getElementById("volunteerRole");
+  const otherVolunteerField = document.getElementById("otherVolunteerField");
+  const otherVolunteerInput = document.getElementById("otherVolunteerInput");
+
+  volunteerRole.addEventListener("change", function() {
+    if(this.value === "Other"){
+      otherVolunteerField.classList.remove("hidden");
+      otherVolunteerInput.setAttribute("required", "true");
+    } else {
+      otherVolunteerField.classList.add("hidden");
+      otherVolunteerInput.removeAttribute("required");
+    }
+  });
+</script>
+
+</body>
+</html>
+

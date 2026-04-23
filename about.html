@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | We For A Cause</title>
+
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<!-- AOS Animations -->
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+<!-- Remixicon -->
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+  body, html {
+    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+  }
+</style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+<!-- NAVBAR -->
+<div class="nav"></div>
+
+<!-- ABOUT SECTION -->
+<section class="py-16 md:py-24 bg-slate-100">
+
+  <!-- HEADING -->
+  <div class="text-center mt-20 mb-16" data-aos="fade-up">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900">
+      About <span class="text-teal-500">Us</span>
+    </h2>
+    <p class="mt-4 text-gray-600 max-w-2xl mx-auto text-sm sm:text-base">
+      We are a passionate team dedicated to rescuing animals, spreading awareness, and creating a better and more compassionate world.
+    </p>
+  </div>
+
+  <!-- MAIN CONTAINER -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 space-y-20">
+
+    <!-- ================= OUR STORY ================= -->
+    <div class="grid md:grid-cols-2 gap-10 items-center bg-white p-6 md:p-8 rounded-2xl shadow">
+      <img src="./newimages/dogs (1).jpg" class="rounded-2xl shadow-lg w-full h-[300px] md:h-[400px] object-cover" data-aos="fade-right">
+      <div data-aos="fade-left">
+        <h3 class="text-2xl md:text-3xl font-bold text-teal-600 mb-4">OUR STORY !!!</h3>
+        <p class="text-gray-700 text-sm sm:text-base leading-relaxed mb-4">
+          WE FOR A CAUSE FOUNDATION (WFC) is a NGO started in 2019 by a group of friends and young volunteers who are now change makers. Coco was the inspiration behind starting this NGO, he was abandoned and found by us in August 2019. We tried contacting several animal help groups, but no one showed up. We decided to act ourselves and succeeded in helping Coco and saving his life. He will always be our First Rescue of WFC. Later, we found many animals in need and decided to register this NGO to work on a larger scale.
+        </p>
+        <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+          From a family of 3 to 50 now, we work for the well-being of animals suffering on the streets. As the name suggests, "WE" means no one can bring change alone. We are constantly working towards positive change in the Environment, Society, and lives of animals. Our logo reflects our focus on Environment, Animal Welfare, and social issues.
+        </p>
+      </div>
+    </div>
+
+    <!-- ================= WHAT WE DO ================= -->
+    <div class="grid md:grid-cols-2 gap-10 items-center bg-slate-200 p-6 md:p-8 rounded-2xl shadow">
+      <div data-aos="fade-right">
+        <h3 class="text-2xl md:text-3xl font-bold text-teal-600 mb-4">WHAT WE DO ?</h3>
+        <p class="text-gray-700 text-sm sm:text-base leading-relaxed mb-4">
+          Strays face harsh lives with no shelter, food, or care. We aim to bring peace and happiness to these voiceless souls by encouraging society to join hands and support them.
+        </p>
+        <p class="text-gray-700 text-sm sm:text-base leading-relaxed">
+          We also work on women empowerment, child education, awareness campaigns, and transgender empowerment. We organize self-defense sessions for women in high-risk areas to ensure safety and equality for all.
+        </p>
+      </div>
+      <div class="relative">
+        <img src="./newimages/about (2).jpg" class="rounded-2xl shadow-lg w-full h-[300px] md:h-[400px] object-cover">
+        <div class="absolute inset-0 bg-black/30 rounded-2xl"></div>
+      </div>
+    </div>
+
+    <!-- ================= WHY IT MATTERS ================= -->
+    <div class="grid md:grid-cols-2 gap-10 items-center bg-white p-6 md:p-8 rounded-2xl shadow">
+      <img src="./newimages/abouts (2).jpg" class="rounded-2xl shadow-lg w-full h-[300px] md:h-[400px] object-cover object-top" data-aos="fade-right">
+      <div data-aos="fade-left">
+        <h3 class="text-2xl md:text-3xl font-bold text-teal-600 mb-4">WHY WHAT WE DO MATTERS ?</h3>
+        <p class="text-gray-700 text-sm sm:text-base mb-4 leading-relaxed">
+          Driven by making an impact and inspiring change, our movements expand understanding of contemporary issues and develop campaigns pushing for positive solutions.
+        </p>
+        <ol class="list-decimal pl-5 space-y-2 text-gray-700 text-sm sm:text-base">
+          <li>Since 2020, we saved 800+ animals in distress and continue to save more. We also fed 800 animals during lockdown.</li>
+          <li>150+ families were provided food during the lockdown, with ongoing support in the future.</li>
+          <li>We focus on child education, transgender awareness, and women empowerment in remote and tribal areas with 9 successful projects under all initiatives.</li>
+        </ol>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<div class="footer"></div>
+
+<!-- SCRIPTS -->
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="./footer.js"></script>
+<script src="./nav.js"></script>
+
+<script>
+  // Initialize AOS
+  AOS.init({ duration: 1000, once: true });
+
+  // Mobile menu toggle
+  const menuBtn = document.getElementById("menu-btn");
+  const mobileMenu = document.getElementById("mobile-menu");
+  if(menuBtn) menuBtn.addEventListener("click", () => { mobileMenu.classList.toggle("hidden"); });
+
+  // Project dropdown toggle
+  const projectBtn = document.getElementById("projects-btn");
+  const projectMenu = document.getElementById("projects-menu");
+  if(projectBtn) projectBtn.addEventListener("click", () => { projectMenu.classList.toggle("hidden"); });
+
+  const projectToggle = document.getElementById("project-toggle");
+  const projectMobile = document.getElementById("project-mobile");
+  if(projectToggle) projectToggle.addEventListener("click", () => { projectMobile.classList.toggle("hidden"); });
+
+  // Close mobile menu on scroll
+  window.addEventListener("scroll", () => { if(mobileMenu) mobileMenu.classList.add("hidden"); });
+</script>
+
+</body>
+</html>
+

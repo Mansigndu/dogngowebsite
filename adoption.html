@@ -1,0 +1,206 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Get Involved | We For A Cause</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
+</head>
+<style>
+  body,html{
+    overflow-x: hidden;
+  }
+</style>
+
+<body class="bg-slate-50">
+    <div class="nav"></div>
+
+<!-- HERO SECTION -->
+<section class="relative py-24 bg-gradient-to-r from-slate-900 to-teal-800 text-white">
+
+<div class="max-w-7xl mx-auto px-6 text-center">
+
+<h1 class="text-4xl md:text-5xl font-bold mb-6">
+Get <span class="text-teal-400">Involved</span>
+</h1>
+
+<p class="max-w-3xl mx-auto text-gray-200 text-lg">
+Join our mission to protect and care for stray animals. Together we can
+rescue, feed and provide loving homes for animals in need.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- CARDS SECTION -->
+<section class="py-24">
+
+<div class="max-w-7xl mx-auto px-6">
+
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+
+<!-- Card -->
+<div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl hover:-translate-y-2 transition duration-300">
+
+<h2 class="text-xl font-semibold text-slate-800 mb-3">
+What We Do
+</h2>
+
+<p class="text-gray-600 text-sm">
+We work for animal rescue, medical treatment, feeding drives and finding
+loving homes for stray dogs.
+</p>
+
+<a href="whatwedo.html"
+class="inline-block mt-4 text-teal-500 font-semibold hover:text-teal-600">
+Learn More →
+</a>
+
+</div>
+
+
+<!-- Card -->
+<div class="bg-white rounded-xl shadow-md p-6 hover:shadow-xl hover:-translate-y-2 transition duration-300">
+
+<h2 class="text-xl font-semibold text-slate-800 mb-3">
+Volunteer
+</h2>
+
+<p class="text-gray-600 text-sm">
+Become a volunteer and help us rescue animals, organize feeding drives
+and support our mission.
+</p>
+
+<a href="joinus.html"
+class="inline-block mt-4 text-teal-500 font-semibold hover:text-teal-600">
+Join Us →
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FOOTER -->
+<div class="footer"></div>
+
+</body>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script src="./footer.js"></script>
+<script src="./nav.js"></script>
+
+<script>
+  const projectBtn = document.getElementById("projects-btn");
+const projectMenu = document.getElementById("projects-menu");
+
+projectBtn.addEventListener("click", () => {
+  projectMenu.classList.toggle("hidden");
+});
+  const projectToggle = document.getElementById("project-toggle");
+const projectMobile = document.getElementById("project-mobile");
+
+projectToggle.addEventListener("click", () => {
+  projectMobile.classList.toggle("hidden");
+});
+
+/* MOBILE MENU TOGGLE */
+
+const menuBtn = document.getElementById("menu-btn")
+const mobileMenu = document.getElementById("mobile-menu")
+
+menuBtn.addEventListener("click", () => {
+
+mobileMenu.classList.toggle("hidden")
+
+})
+
+const counters = document.querySelectorAll('.counter');
+
+counters.forEach(counter => {
+
+const updateCount = () => {
+
+const target = +counter.getAttribute('data-target');
+const count = +counter.innerText;
+
+const speed = 50;
+
+const inc = target / speed;
+
+if(count < target){
+
+counter.innerText = Math.ceil(count + inc);
+setTimeout(updateCount,30);
+
+}
+
+else{
+
+counter.innerText = target;
+
+}
+
+};
+
+updateCount();
+
+});
+
+
+
+AOS.init({
+duration:1000,
+once:true
+});
+const faqButtons = document.querySelectorAll('.faq-btn');
+
+  faqButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+      const answer = btn.nextElementSibling;
+      const icon = btn.querySelector('.faq-icon');
+
+      answer.classList.toggle('hidden');
+      icon.textContent = answer.classList.contains('hidden') ? '+' : '-';
+    });
+  });
+AOS.init({
+    once: true,
+    duration: 800,
+    offset: 120,
+  });
+
+
+
+
+// CLOSE MENU WHEN SCROLL
+window.addEventListener("scroll", () => {
+mobileMenu.classList.add("hidden");
+});
+
+
+
+</script>
+</html>
+
+
+
